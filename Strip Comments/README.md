@@ -2,7 +2,7 @@
 
 - whitespace at the end of the line should also be stripped out.
 
-## Example:
+## Examples:
 
 Given an input string of:
 

@@ -13,10 +13,3 @@ function solution(input, markers) {
     })
     .join("\n");
 }
-
-console.log(
-  solution("apples, plums % and bananas\npears\noranges !applesauce", [
-    "%",
-    "!",
-  ])
-);
