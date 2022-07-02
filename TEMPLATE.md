@@ -1,14 +1,14 @@
-# Kata Name
+# Name
 
 - Kata description here.
 
-## Kata Example:
+## Examples:
 
 ```
 Examples here.
 ```
 
-## Kata Sample Tests
+## Sample Tests
 
 ```
 Sample tests here.
