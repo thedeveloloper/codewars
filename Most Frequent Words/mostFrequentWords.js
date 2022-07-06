@@ -7,13 +7,15 @@ function topThreeWords(text) {
       .replace(/\n{2,}/g, " ")
       .split(" ")
       .reduce((wordCount, word) => {
-        if (word !== "'" && word !== "") {
-          if (wordCount[word]) {
-            wordCount[word] += 1;
-          } else {
-            wordCount[word] = 1;
-          }
+        if (word === "'" || word === "") {
+          return wordCount;
         }
+        if (wordCount[word]) {
+          wordCount[word] += 1;
+        } else {
+          wordCount[word] = 1;
+        }
+
         return wordCount;
       }, {})
   ).sort((a, b) => {
