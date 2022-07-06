@@ -1,16 +1,18 @@
 function topThreeWords(text) {
-  if (text === "") return [];
+  console.log(text);
   const wordOccurences = Object.entries(
     text
       .toLowerCase()
       .replace(/[.,/\#!$%^&*;:{}=-_`~()]/g, "")
-      .replace(/s{2,}/g, " ")
+      .replace(/\n{2,}/g, " ")
       .split(" ")
       .reduce((wordCount, word) => {
-        if (wordCount[word]) {
-          wordCount[word] += 1;
-        } else {
-          wordCount[word] = 1;
+        if (word !== "'" && word !== "") {
+          if (wordCount[word]) {
+            wordCount[word] += 1;
+          } else {
+            wordCount[word] = 1;
+          }
         }
         return wordCount;
       }, {})
@@ -26,7 +28,3 @@ function topThreeWords(text) {
     return topThree;
   }, []);
 }
-
-console.log(
-  topThreeWords("A a a a b b b b c c c c d d d e e e f f f f f f f f")
-);
